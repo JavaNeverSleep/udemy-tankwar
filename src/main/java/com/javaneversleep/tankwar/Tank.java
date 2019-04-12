@@ -1,9 +1,13 @@
 package com.javaneversleep.tankwar;
 
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
+import java.io.File;
 
 class Tank {
 
@@ -135,6 +139,10 @@ class Tank {
         Missile missile = new Missile(x + getImage().getWidth(null) / 2 - 6,
             y + getImage().getHeight(null) / 2 - 6, enemy, direction);
         GameClient.getInstance().add(missile);
+
+        Media sound = new Media(new File("assets/audios/shoot.wav").toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
     }
 
     private boolean stopped;
