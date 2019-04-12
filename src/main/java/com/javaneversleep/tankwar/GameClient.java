@@ -27,6 +27,12 @@ public class GameClient extends JComponent {
 
     private List<Wall> walls;
 
+    private List<Missile> missiles;
+
+    synchronized void add(Missile missile) {
+        missiles.add(missile);
+    }
+
     List<Tank> getEnemyTanks() {
         return enemyTanks;
     }
@@ -38,6 +44,7 @@ public class GameClient extends JComponent {
     private GameClient() {
         this.playerTank = new Tank(400, 100, Direction.DOWN);
         this.enemyTanks =  new ArrayList<>(12);
+        this.missiles = new ArrayList<>();
         this.walls = Arrays.asList(
             new Wall(200, 140, true, 15),
             new Wall(200, 540, true, 15),
@@ -63,13 +70,17 @@ public class GameClient extends JComponent {
         for (Wall wall : walls) {
             wall.draw(g);
         }
+
+        for (Missile missile : missiles) {
+            missile.draw(g);
+        }
     }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         frame.setTitle("史上最无聊的坦克大战！");
         frame.setIconImage(new ImageIcon("assets/images/icon.png").getImage());
-        final GameClient client = new GameClient();
+        final GameClient client = GameClient.getInstance();
         client.repaint();
         frame.add(client);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
