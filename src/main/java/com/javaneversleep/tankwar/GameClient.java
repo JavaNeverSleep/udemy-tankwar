@@ -15,11 +15,25 @@ import java.util.List;
 
 public class GameClient extends JComponent {
 
+    private static final GameClient INSTANCE = new GameClient();
+
+    static GameClient getInstance() {
+        return INSTANCE;
+    }
+
     private Tank playerTank;
 
     private List<Tank> enemyTanks;
 
     private List<Wall> walls;
+
+    List<Tank> getEnemyTanks() {
+        return enemyTanks;
+    }
+
+    List<Wall> getWalls() {
+        return walls;
+    }
 
     private GameClient() {
         this.playerTank = new Tank(400, 100, Direction.DOWN);
@@ -74,6 +88,7 @@ public class GameClient extends JComponent {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
+        //noinspection InfiniteLoopStatement
         while (true) {
             client.repaint();
             try {
