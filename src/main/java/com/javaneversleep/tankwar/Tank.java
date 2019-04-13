@@ -1,5 +1,7 @@
 package com.javaneversleep.tankwar;
 
+import com.javaneversleep.tankwar.Save.Position;
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -8,6 +10,10 @@ import java.awt.event.KeyEvent;
 import java.util.Random;
 
 class Tank {
+
+    Position getPosition() {
+        return new Position(x, y, direction);
+    }
 
     private static final int MOVE_SPEED = 5;
 
@@ -49,6 +55,10 @@ class Tank {
         this(x, y, false, direction);
     }
 
+    Tank(Position position, boolean enemy) {
+        this(position.getX(), position.getY(), enemy, position.getDirection());
+    }
+
     Tank(int x, int y, boolean enemy, Direction direction) {
         this.x = x;
         this.y = y;
@@ -78,10 +88,17 @@ class Tank {
         }
         this.move();
 
-        if (x < 0) x = 0;
-        else if (x > 800- getImage().getWidth(null)) x = 800 - getImage().getWidth(null);
-        if (y < 0) y = 0;
-        else if (y > 600 - getImage().getHeight(null)) y = 600 - getImage().getHeight(null);
+        if (x < 0) {
+            x = 0;
+        } else if (x > GameClient.WIDTH - getImage().getWidth(null)) {
+            x = GameClient.WIDTH - getImage().getWidth(null);
+        }
+
+        if (y < 0) {
+            y = 0;
+        } else if (y > GameClient.HEIGHT - getImage().getHeight(null)) {
+            y = GameClient.HEIGHT - getImage().getHeight(null);
+        }
 
         Rectangle rec = this.getRectangle();
         for (Wall wall : GameClient.getInstance().getWalls()) {
