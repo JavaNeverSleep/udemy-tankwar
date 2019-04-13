@@ -19,7 +19,9 @@ class Tank {
 
     private boolean live = true;
 
-    private int hp = 100;
+    private static final int MAX_HP = 100;
+
+    private int hp = MAX_HP;
 
     int getHp() {
         return hp;
@@ -65,6 +67,10 @@ class Tank {
         return direction.getImage(prefix + "tank");
     }
 
+    boolean isDying() {
+        return this.hp <= MAX_HP * 0.2;
+    }
+
     void draw(Graphics g) {
         int oldX = x, oldY = y;
         if (!this.enemy) {
@@ -101,17 +107,39 @@ class Tank {
         }
 
         if (!enemy) {
+            Blood blood = GameClient.getInstance().getBlood();
+            if (blood.isLive() && rec.intersects(blood.getRectangle())) {
+                this.hp = MAX_HP;
+                Tools.playAudio("revive.wav");
+                blood.setLive(false);
+            }
+
             g.setColor(Color.WHITE);
             g.fillRect(x, y - 10, this.getImage().getWidth(null), 10);
 
             g.setColor(Color.RED);
-            int width = hp * this.getImage().getWidth(null) / 100;
+            int width = hp * this.getImage().getWidth(null) / MAX_HP;
             g.fillRect(x, y - 10, width, 10);
+
+            Image petImage = Tools.getImage("pet-camel.gif");
+            g.drawImage(petImage, this.x - petImage.getWidth(null) - DISTANCE_TO_PET, this.y, null);
         }
         g.drawImage(this.getImage(), this.x, this.y, null);
     }
 
+    private static final int DISTANCE_TO_PET = 4;
+
     Rectangle getRectangle() {
+        if (enemy) {
+            return new Rectangle(x, y, getImage().getWidth(null), getImage().getHeight(null));
+        } else {
+            Image petImage = Tools.getImage("pet-camel.gif");
+            int delta = petImage.getWidth(null) + DISTANCE_TO_PET;
+            return new Rectangle(x - delta, y, getImage().getWidth(null) + delta, getImage().getHeight(null));
+        }
+    }
+
+    Rectangle getRectangleForHitDetection() {
         return new Rectangle(x, y, getImage().getWidth(null), getImage().getHeight(null));
     }
 
