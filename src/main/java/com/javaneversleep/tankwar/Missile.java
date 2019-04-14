@@ -44,7 +44,7 @@ class Missile {
 
     void draw(Graphics g) {
         move();
-        if (x < 0 || x > 800 || y < 0 || y > 600) {
+        if (x < 0 || x > GameClient.WIDTH || y < 0 || y > GameClient.HEIGHT) {
             this.live = false;
             return;
         }
