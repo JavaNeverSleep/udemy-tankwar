@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exe4j version="6.0.2" transformSequenceNumber="2">
+  <directoryPresets config="C:/Users/Nathanael/Downloads/TankWar/assets/images" />
+  <application name="TankWar" distributionSourceDir="C:/Users/Nathanael/Downloads/TankWar">
+    <languages>
+      <principalLanguage id="en" customLocalizationFile="" />
+    </languages>
+  </application>
+  <executable name="TankWar" type="1" iconSet="true" iconFile="C:/Users/Nathanael/Downloads/TankWar/assets/images/tankwar.ico" executableDir="" redirectStderr="true" stderrFile="error.log" stderrMode="append" redirectStdout="false" stdoutFile="output.log" stdoutMode="overwrite" failOnStderrOutput="true" executableMode="1" changeWorkingDirectory="true" workingDirectory="." singleInstance="true" serviceStartType="2" serviceDependencies="" serviceDescription="" jreLocation="" executionLevel="asInvoker" checkConsoleParameter="false" globalSingleInstance="false" singleInstanceActivate="true" dpiAware="java9+" amd64="false">
+    <messageSet />
+    <versionInfo include="true" fileVersion="1.0" fileDescription="新版坦克大戰" legalCopyright="" internalName="TankWar" productName="" companyName="Java Never Sleep" productVersion="1.0" />
+  </executable>
+  <splashScreen show="true" width="0" height="0" bitmapFile="C:/Users/Nathanael/Downloads/TankWar/assets/images/tank.png" textOverlay="false">
+    <text>
+      <statusLine x="20" y="20" text="" fontSize="8" fontColor="0,0,0" bold="false" />
+      <versionLine x="20" y="40" text="version %VERSION%" fontSize="8" fontColor="0,0,0" bold="false" />
+    </text>
+  </splashScreen>
+  <java mainClass="com.javaneversleep.tankwar.GameClient" mainMode="1" vmParameters="" arguments="" allowVMPassthroughParameters="true" preferredVM="" bundleRuntime="true" minVersion="1.8" maxVersion="1.8" allowBetaVM="false" jdkOnly="false">
+    <searchSequence>
+      <registry />
+      <envVar name="JAVA_HOME" />
+      <envVar name="JDK_HOME" />
+    </searchSequence>
+    <classPath>
+      <scanDirectory location="./libs" failOnError="false" />
+    </classPath>
+    <modulePath />
+    <nativeLibraryDirectories />
+    <vmOptions />
+  </java>
+  <includedFiles />
+  <unextractableFiles />
+</exe4j>

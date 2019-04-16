@@ -15,3 +15,5 @@ xcopy target\libs\*.jar %DIST_DIR%\libs\ /d /y /q
 xcopy assets\*.* %DIST_DIR%\assets\ /d /y /e /q
 exe4jc tankwar.exe4j
 ```
+
+可参考模板文件[tankwar.exe4j](tankwar.exe4j)
