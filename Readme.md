@@ -14,6 +14,7 @@ copy target\tankwar-1.0-SNAPSHOT.jar %DIST_DIR%\libs\tankwar.jar /y
 xcopy target\libs\*.jar %DIST_DIR%\libs\ /d /y /q
 xcopy assets\*.* %DIST_DIR%\assets\ /d /y /e /q
 exe4jc tankwar.exe4j
+install4jc tankwar.install4j
 ```
 
-可参考模板文件[tankwar.exe4j](tankwar.exe4j)
+可参考模板文件[tankwar.exe4j](tankwar.exe4j)、[tankwar.install4j](tankwar.install4j)，同时自行修改其中与环境绑定依赖的内容
