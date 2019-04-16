@@ -3,3 +3,7 @@
 /game.sav
 /tmp/*
 /target
+/.settings
+/.classpath
+/.project
+/.factorypath
