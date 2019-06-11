@@ -30,4 +30,4 @@ install4jc tankwar.install4j
 
 - ⭐️ Java Never Sleep [YouTube Channel](https://bit.ly/2F2fMFP)
 - ⭐️ Java Never Sleep [Facebook Page](https://www.facebook.com/javanotsleep)
-- ⭐ Java Never Sleep [GitHub Organization](https://github.com/JavaNeverSleep)
+- ⭐️ Java Never Sleep [GitHub Organization](https://github.com/JavaNeverSleep)
