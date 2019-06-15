@@ -1,7 +1,7 @@
 # 放码过来！新版Java坦克大战
 
-[![Build Status](https://travis-ci.org/JavaNeverSleep/tankwar.svg?branch=master)](https://travis-ci.org/JavaNeverSleep/tankwar)
-[![codecov](https://codecov.io/gh/JavaNeverSleep/tankwar/branch/master/graph/badge.svg)](https://codecov.io/gh/JavaNeverSleep/tankwar)
+[![Build Status](https://travis-ci.org/JavaNeverSleep/udemy-tankwar.svg?branch=master)](https://travis-ci.org/JavaNeverSleep/udemy-tankwar)
+[![codecov](https://codecov.io/gh/JavaNeverSleep/udemy-tankwar/branch/master/graph/badge.svg)](https://codecov.io/gh/JavaNeverSleep/udemy-tankwar)
 
 [![](assets/images/udemy-course.jpg)](https://www.udemy.com/java-tank-war/?couponCode=JAVA-NEVER-SLEEP)
 
