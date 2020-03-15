@@ -3,9 +3,9 @@
 [![Build Status](https://travis-ci.org/JavaNeverSleep/udemy-tankwar.svg?branch=master)](https://travis-ci.org/JavaNeverSleep/udemy-tankwar)
 [![codecov](https://codecov.io/gh/JavaNeverSleep/udemy-tankwar/branch/master/graph/badge.svg)](https://codecov.io/gh/JavaNeverSleep/udemy-tankwar)
 
-[![](assets/images/udemy-course.jpg)](https://www.udemy.com/java-tank-war/?couponCode=JAVA-NEVER-SLEEP)
+[![](assets/images/udemy-course.jpg)](https://www.udemy.com/course/java-tank-war/?couponCode=JAVANEVERSLEEP-MAY)
 
-此项目为Udemy在线课程[“放码过来！新版Java坦克大战”](https://www.udemy.com/java-tank-war/?couponCode=JAVA-NEVER-SLEEP)现场编码结果，建议您与[参考实现](https://github.com/ny83427/tankwar)互相对照。如果您对Java编程语言不够熟悉，建议您先使用我录制的免费Java初阶课程[“放码过来！作个Java实战派”](https://www.udemy.com/java-warrior-part1)补足所需的知识与技能。
+此项目为Udemy在线课程[“放码过来！新版Java坦克大战”](https://www.udemy.com/course/java-tank-war/?couponCode=JAVANEVERSLEEP-MAY)现场编码结果，建议您与[参考实现](https://github.com/ny83427/tankwar)互相对照。如果您对Java编程语言不够熟悉，建议您先使用我录制的免费Java初阶课程[“放码过来！作个Java实战派”](https://www.udemy.com/java-warrior-part1)补足所需的知识与技能。
 
 
 ## 开发环境及相关备忘
